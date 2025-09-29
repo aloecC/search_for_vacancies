@@ -1,53 +1,67 @@
+from __future__ import annotations
 from abc import ABC, abstractmethod
 import requests
+from typing import List, Dict
 
 
 class Parser(ABC):
-    @abstractmethod
-    def connecting_to_the_api(self):
-        """Метод подключения к API."""
+    """
+    Абстрактный базовый класс для работы с API сервисов вакансий.
+    """
+    def __init__(self):
         pass
+    @abstractmethod
+    def connect(self) -> None:
+        """Установить соединение с API (проверка доступности)."""
+        raise NotImplementedError
 
     @abstractmethod
-    def receiving_vacancies_separately(self):
-        """Метод получения вакансий отдельно"""
-        pass
+    def get_vacancies(self, keyword: str) -> List[Dict]:
+        """Получить вакансии по ключевому слову. Возвращает список словарей."""
+        raise NotImplementedError
 
 
-class HH(Parser):
+class HeadHunterAPI(Parser):
+    """
+    Реализация Parser для hh.ru (HeadHunter).
+    """
 
     def __init__(self, file_worker):
-        self.url = 'https://api.hh.ru/vacancies'
-        self.headers = {'User-Agent': 'HH-User-Agent'}
-        self.params = {'text': '', 'page': 0, 'per_page': 100}
-        self.vacancies = []
+        # приватные атрибуты экземпляра
+        self.__url = 'https://github.com/hhru/api/'
+        self.__headers = {'User-Agent': 'HH-User-Agent'}
+        self.__params = {'text': '', 'page': 0, 'per_page': 100}
+        self.__vacancies = []
+        self.__file_worker = file_worker
         super().__init__(file_worker)
 
     def load_vacancies(self, keyword):
-        self.params['text'] = keyword
-        while self.params.get('page') != 20:
-            response = requests.get(self.url, headers=self.headers, params=self.params)
+        self.__params['text'] = keyword
+        while self.__params.get('page') != 20:
+            response = requests.get(self.__url, headers=self.__headers, params=self.__params)
             vacancies = response.json()['items']
-            self.vacancies.extend(vacancies)
-            self.params['page'] += 1
+            self.__vacancies.extend(vacancies)
+            self.__params['page'] += 1
 
-    def connecting_to_the_api(self):
-        """Метод подключения к API."""
+    def __connecting(self):
+        """Приватный метод подключения к API."""
         pass
-    # реализовать вызов в __receiving_vacancies_separately перед отправкой запроса
+
+    # реализовать вызов в receiving_data перед отправкой запроса
     # реализовать отправку запроса на базовый URL
     # реализовать проверку статус-кода ответа
     # Ссылка на API: https://github.com/hhru/api/.
 
-    def __receiving_vacancies_separately(self):
-        """Приватный метод получения вакансий отдельно"""
+    def connecting(self):
+        """Публичный метод подключения к API."""
+        self.__connecting()
+
+    def get_vacancies_separately(self):
+        """Метод получения вакансий отдельно"""
         pass
 
-    def receiving_data(self, keyword):
-        """Метод получения данных"""
+    def get_vacancies(self, keyword: str) -> List[Dict]:
+        """Получить вакансии по ключевому слову. Возвращает список словарей."""
         pass
-    # реализовать формирование параметров для запроса из text и per_page
-    # реализовать отправку запроса на API hh.ru для получения данных о вакансиях по keyword
-    # реализовать сбор данных ответа в формате списка словарей из ключа item
-    # per_page — количество элементов, отображаемых на одной странице результатов при получении данных с веб-сервиса или сайта.
-    # text - строковая переменная в Python, которая хранит HTML-код, полученный с веб-страницы.
+
+
