@@ -1,12 +1,15 @@
-
+from src.api_client import HeadHunterAPI
 
 class BaseVacancyService:
     #Реализовать __slots__ для экономии данных
     pass
 
-    def __init__(self):
-        #Минимум 4 аргумента
-        pass
+    def __init__(self, name, url, salary, requirement):
+        self.url = url
+        self.job_title = name
+        self.salary = salary
+        self.requirement = requirement
+        self.lst_vacancy = []
 
     def compare_hour_ly_wage(self):
         """метод сравнения вакансий с повременной оплатой."""
