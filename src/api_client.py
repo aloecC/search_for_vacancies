@@ -8,17 +8,18 @@ class Parser(ABC):
     """
     Абстрактный базовый класс для работы с API сервисов вакансий.
     """
-    def __init__(self):
-        pass
+    def __init__(self, file_worker=None):
+        self.file_worker = file_worker
+
     @abstractmethod
     def connect(self) -> None:
         """Установить соединение с API (проверка доступности)."""
-        raise NotImplementedError
+        pass
 
     @abstractmethod
     def get_vacancies(self, keyword: str) -> List[Dict]:
         """Получить вакансии по ключевому слову. Возвращает список словарей."""
-        raise NotImplementedError
+        pass
 
 
 class HeadHunterAPI(Parser):
@@ -26,13 +27,14 @@ class HeadHunterAPI(Parser):
     Реализация Parser для hh.ru (HeadHunter).
     """
 
-    def __init__(self, file_worker):
+    def __init__(self, file_worker=None):
         # приватные атрибуты экземпляра
-        self.__url = 'https://github.com/hhru/api/'
+        self.__url = 'https://api.hh.ru/vacancies'
         self.__headers = {'User-Agent': 'HH-User-Agent'}
         self.__params = {'text': '', 'page': 0, 'per_page': 100}
         self.__vacancies = []
-        self.__file_worker = file_worker
+        self.__vacancies_keyword = []
+        self.__status = False
         super().__init__(file_worker)
 
     def load_vacancies(self, keyword):
@@ -43,25 +45,40 @@ class HeadHunterAPI(Parser):
             self.__vacancies.extend(vacancies)
             self.__params['page'] += 1
 
-    def __connecting(self):
+    def __connect(self):
         """Приватный метод подключения к API."""
-        pass
-
-    # реализовать вызов в receiving_data перед отправкой запроса
+        response = requests.get(self.__url, headers=self.__headers, params=self.__params)
+        if response.status_code == 200:
+            self.__status = True
+        else:
+            print(f"Ошибка при запросе: {response.status_code} - {response.text}")
+    # реализовать вызов в get_vacancies перед отправкой запроса
     # реализовать отправку запроса на базовый URL
     # реализовать проверку статус-кода ответа
     # Ссылка на API: https://github.com/hhru/api/.
 
-    def connecting(self):
+    def connect(self):
         """Публичный метод подключения к API."""
-        self.__connecting()
-
-    def get_vacancies_separately(self):
-        """Метод получения вакансий отдельно"""
-        pass
+        return self.__connect()
 
     def get_vacancies(self, keyword: str) -> List[Dict]:
         """Получить вакансии по ключевому слову. Возвращает список словарей."""
-        pass
+        self.__vacancies_keyword = []
+        self.__params['text'] = keyword
+        self.__params['per_page'] = 10
+        self.__connect()
+        response = requests.get(self.__url, headers=self.__headers, params=self.__params)
+        self.__vacancies_keyword = response.json().get('items', [])
+        return self.__vacancies_keyword
+        # реализовать формирование параметров для запроса из text и per_page
+        # реализовать отправку запроса на API hh.ru для получения данных о вакансиях по keyword
+        # реализовать сбор данных ответа в формате списка словарей из ключа item.
+
+    def get_vacancies_separately(self):
+        """Метод получения вакансий отдельно"""
+        return self.__vacancies
+
+
+
 
 
