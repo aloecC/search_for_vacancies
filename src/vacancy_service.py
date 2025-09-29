@@ -20,11 +20,13 @@ class BaseVacancyService:
         """метод сравнения вакансий с разными типами оплаты."""
         pass
 
-    def data_validation_time_based_payment(self):
+    def __data_validation_time_based_payment(self):
         """метод валидации данных (повременный расчет)"""
+        #Используется при инициализации атрибутов
         pass
 
-    def data_validation_urgent_payment(self):
+    def __data_validation_urgent_payment(self):
         """метод валидации данных (сдельный расчет)"""
+        # Используется при инициализации атрибутов
         pass
 
