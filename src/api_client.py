@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
 
+#Реализовать доп классы для работы с файлами
+
 
 class BaseApiClient(ABC):
     @abstractmethod
@@ -20,7 +22,6 @@ class HHApiClient(BaseApiClient):
     # реализовать вызов в __receiving_vacancies_separately перед отправкой запроса
     # реализовать отправку запроса на базовый URL
     # реализовать проверку статус-кода ответа
-
 
     def __receiving_vacancies_separately(self):
         """Приватный метод получения вакансий отдельно"""
