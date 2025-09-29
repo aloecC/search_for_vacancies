@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 import json
-
+#Реализовать доп классы для работы с файлами
 
 class BaseFileManager(ABC):
 

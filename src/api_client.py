@@ -1,7 +1,5 @@
 from abc import ABC, abstractmethod
 
-#Реализовать доп классы для работы с файлами
-
 
 class BaseApiClient(ABC):
     @abstractmethod
