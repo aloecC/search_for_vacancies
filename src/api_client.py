@@ -52,10 +52,6 @@ class HeadHunterAPI(Parser):
             self.__status = True
         else:
             print(f"Ошибка при запросе: {response.status_code} - {response.text}")
-    # реализовать вызов в get_vacancies перед отправкой запроса
-    # реализовать отправку запроса на базовый URL
-    # реализовать проверку статус-кода ответа
-    # Ссылка на API: https://github.com/hhru/api/.
 
     def connect(self):
         """Публичный метод подключения к API."""
@@ -70,9 +66,6 @@ class HeadHunterAPI(Parser):
         response = requests.get(self.__url, headers=self.__headers, params=self.__params)
         self.__vacancies_keyword = response.json().get('items', [])
         return self.__vacancies_keyword
-        # реализовать формирование параметров для запроса из text и per_page
-        # реализовать отправку запроса на API hh.ru для получения данных о вакансиях по keyword
-        # реализовать сбор данных ответа в формате списка словарей из ключа item.
 
     def get_vacancies_separately(self):
         """Метод получения вакансий отдельно"""
