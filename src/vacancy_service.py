@@ -29,11 +29,13 @@ class Vacancy(HeadHunterAPI):
     def _validate_salary(self, value):
         # Принятое поведение:
         # {'from': 1000, 'to': 2000, 'currency': 'USD', 'gross': True} или
+        if isinstance(value, str):
+            return value.strip()
 
         if value is None:
             return 0
 
-        if value['to'] != None:
+        if value['to'] is not None:
             if isinstance(value['from'], (int, float)) and isinstance(value['to'], (int, float)):
                 if value['from'] < 0 or value['to'] < 0:
                     raise ValueError("Зарплата не может быть отрицательной.")
@@ -93,7 +95,6 @@ class Vacancy(HeadHunterAPI):
             return NotImplemented
         return self.salary >= other.salary
 
-
     @classmethod
     def get_filtered_vacancies(cls, vacancies_json):
         """
@@ -123,6 +124,4 @@ class Vacancy(HeadHunterAPI):
                 f"Требования: {vacancy.requirement}."
             )
         return vacancies_info
-
-
 

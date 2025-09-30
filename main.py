@@ -14,7 +14,7 @@ for f in vacancies_list:
     print(f)
 
 # Пример работы контструктора класса с одной вакансией
-#vacancy = Vacancy("Python Developer", "<https://hh.ru/vacancy/123456>", "100000-150000 руб.", "Требования: опыт работы от 3 лет...")
+#vacancy = Vacancy("Python Developer", "<https://hh.ru/vacancy/123456>", "100000-150000", "Требования: опыт работы от 3 лет...")
 
 # Сохранение информации о вакансиях в файл
 #json_saver = JSONSaver()
