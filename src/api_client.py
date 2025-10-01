@@ -57,11 +57,11 @@ class HeadHunterAPI(Parser):
         """Публичный метод подключения к API."""
         return self.__connect()
 
-    def get_vacancies(self, keyword: str) -> List[Dict]:
+    def get_vacancies(self, keyword: str, per_page=10) -> List[Dict]:
         """Получить вакансии по ключевому слову. Возвращает список словарей."""
         self.__vacancies_keyword = []
         self.__params['text'] = keyword
-        self.__params['per_page'] = 10
+        self.__params['per_page'] = per_page
         self.__connect()
         response = requests.get(self.__url, headers=self.__headers, params=self.__params)
         self.__vacancies_keyword = response.json().get('items', [])

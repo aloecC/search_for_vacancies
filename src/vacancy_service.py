@@ -1,6 +1,6 @@
 from typing import List, Dict
 
-from src.api_client import HeadHunterAPI, Parser
+from src.api_client import HeadHunterAPI
 
 
 class Vacancy(HeadHunterAPI):
@@ -125,3 +125,10 @@ class Vacancy(HeadHunterAPI):
             )
         return vacancies_info
 
+    def to_dict(self):
+        return {
+            "name": self.name,
+            "url": self.url,
+            "salary": self.salary,
+            "requirements": self.requirement,
+        }

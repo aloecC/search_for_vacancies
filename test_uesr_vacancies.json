@@ -1,5 +1,11 @@
 [
     {
+        "name": "Python Developer",
+        "url": "<https://hh.ru/vacancy/123456>",
+        "salary": "100000-150000",
+        "requirements": "Требования: опыт работы от 3 лет..."
+    },
+    {
         "name": "Стажер в Hard Code",
         "url": "https://api.hh.ru/vacancies/125834072?host=hh.ru",
         "salary": 0,
@@ -24,21 +30,9 @@
         "requirements": ""
     },
     {
-        "name": "QA тестировщик",
-        "url": "https://api.hh.ru/vacancies/126027478?host=hh.ru",
-        "salary": "110000",
-        "requirements": ""
-    },
-    {
         "name": "Бухгалтер",
         "url": "https://api.hh.ru/vacancies/125731793?host=hh.ru",
         "salary": "2200",
-        "requirements": ""
-    },
-    {
-        "name": "Инженер по тестированию",
-        "url": "https://api.hh.ru/vacancies/126010780?host=hh.ru",
-        "salary": 0,
         "requirements": ""
     },
     {
@@ -48,15 +42,27 @@
         "requirements": ""
     },
     {
-        "name": "Python junior/middle разработчик",
-        "url": "https://api.hh.ru/vacancies/125976319?host=hh.ru",
-        "salary": "90000-130000",
+        "name": "ML Engineer",
+        "url": "https://api.hh.ru/vacancies/126011486?host=hh.ru",
+        "salary": 0,
         "requirements": ""
     },
     {
-        "name": "Python-разработчик",
-        "url": "https://api.hh.ru/vacancies/126021540?host=hh.ru",
-        "salary": "140000-180000",
+        "name": "Инженер по тестированию",
+        "url": "https://api.hh.ru/vacancies/126010780?host=hh.ru",
+        "salary": 0,
+        "requirements": ""
+    },
+    {
+        "name": "Junior Python разработчик",
+        "url": "https://api.hh.ru/vacancies/125979327?host=hh.ru",
+        "salary": 0,
+        "requirements": ""
+    },
+    {
+        "name": "Python junior/middle разработчик",
+        "url": "https://api.hh.ru/vacancies/125976319?host=hh.ru",
+        "salary": "90000-130000",
         "requirements": ""
     }
 ]
