@@ -34,16 +34,33 @@ class JSONSaver(BaseFileManager):
 
     def receiving_data_from_a_file(self):
         """Метод получения данных из файла"""
+        if not os.path.exists(self._js_file):
+            # Если файла нет, вернуть пустой список
+            return []
         with open(self._js_file, 'r', encoding="utf-8") as file:
-            file = json.load(file)
-            return file
+            try:
+                data = json.load(file)
+            except json.JSONDecodeError:
+                data = []
+            return data
 
     def adding_data_to_file(self, new_data):
         """Метод добавления данных в файл"""
-        if os.path.exists('user_vacancies.json'):
-            current_data = self.receiving_data_from_a_file()
-            if isinstance(new_data, Vacancy):
-                current_data.append(vars(new_data))
+        # Получаем текущие данные (если файла нет или он пустой — пустой список)
+        current_data = self.receiving_data_from_a_file()
+
+        # Приводим новый объект Vacancy к словарю
+        if isinstance(new_data, Vacancy):
+            new_item = vars(new_data)
+        elif isinstance(new_data, dict):
+            new_item = new_data
+        else:
+            # Неизвестный тип - ничего не добавляем
+            return
+        current_data.append(new_item)
+        # Сохраняем обратно в файл
+        with open(self._js_file, 'w', encoding="utf-8") as file:
+            json.dump(current_data, file, ensure_ascii=False, indent=4)
 
 
 

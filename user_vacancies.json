@@ -1,0 +1,19 @@
+[
+    {
+        "_HeadHunterAPI__url": "https://api.hh.ru/vacancies",
+        "_HeadHunterAPI__headers": {
+            "User-Agent": "HH-User-Agent"
+        },
+        "_HeadHunterAPI__params": {
+            "text": "",
+            "page": 0,
+            "per_page": 100
+        },
+        "_HeadHunterAPI__vacancies": [],
+        "_HeadHunterAPI__vacancies_keyword": [],
+        "_HeadHunterAPI__status": false,
+        "file_worker": null,
+        "_requirement": "Требования: опыт работы от 3 лет...",
+        "_Vacancy__lst_vacancy": []
+    }
+]

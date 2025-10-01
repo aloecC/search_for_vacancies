@@ -6,13 +6,13 @@ hh_api = HeadHunterAPI()
 
 # Получение вакансий с hh.ru в формате JSON
 hh_vacancies = hh_api.get_vacancies("Python")
-for v in hh_vacancies:
-    print(v)
+#for v in hh_vacancies:
+#   print(v)
 
 # Преобразование набора данных из JSON в список объектов
 vacancies_list = Vacancy.cast_to_object_list(hh_vacancies)
-for f in vacancies_list:
-    print(f)
+#for f in vacancies_list:
+#    print(f)
 
 # Пример работы контструктора класса с одной вакансией
 vacancy = Vacancy("Python Developer", "<https://hh.ru/vacancy/123456>", "100000-150000", "Требования: опыт работы от 3 лет...")
