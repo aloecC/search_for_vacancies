@@ -40,7 +40,7 @@ class Vacancy(HeadHunterAPI):
                 if value['from'] < 0 or value['to'] < 0:
                     raise ValueError("Зарплата не может быть отрицательной.")
                 return f"{value['from']}-{value['to']}"
-        if value['from'] == None:
+        if value['from'] is None:
             if isinstance(value['to'], (int, float)):
                 return f"{value['to']}"
         return f"{value['from']}"
@@ -52,7 +52,7 @@ class Vacancy(HeadHunterAPI):
             raise ValueError("Requirement должны быть строкой.")
         return value.strip()
 
-    # Свойства для доступа к приватным полям (если нужен внешний доступ)
+    # Свойства для доступа к приватным полям
     @property
     def name(self) -> str:
         return self._name
