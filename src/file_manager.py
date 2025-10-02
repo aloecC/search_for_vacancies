@@ -6,9 +6,6 @@ import json
 from src.vacancy_service import Vacancy
 
 
-#Реализовать доп классы для работы с файлами
-
-
 class BaseFileManager(ABC):
 
     @abstractmethod
@@ -38,7 +35,7 @@ class JSONSaver(BaseFileManager):
     def receiving_data_from_a_file(self):
         """Метод получения данных из файла"""
         if not os.path.exists(self.__js_file):
-            # Если файла нет, вернуть пустой список
+            # Если файла нет, вернет пустой список
             return []
         with open(self.__js_file, 'r', encoding="utf-8") as file:
             try:

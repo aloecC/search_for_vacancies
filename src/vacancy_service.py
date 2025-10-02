@@ -106,7 +106,7 @@ class Vacancy(HeadHunterAPI):
             name = vacancy_data.get('name')
             url = vacancy_data.get('url')
             salary = vacancy_data.get('salary')
-            requirement = vacancy_data.get('requirement')
+            requirement = vacancy_data.get('snippet', {}).get('requirement')
             vacancy_obj = Vacancy(name, url, salary, requirement)
             __lst_vacancy.append(vacancy_obj)
         return __lst_vacancy
