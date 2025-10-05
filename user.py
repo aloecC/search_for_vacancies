@@ -49,6 +49,8 @@ platforms = ["HeadHunter"]
 #filter_words = input("Введите ключевые слова для фильтрации вакансий: ").split() #SQL Английский HTML CSS JSON
 #salary_range = input("Введите диапазон зарплат: ") # Пример: 100000-150000
 #user_salary = UserInteraction(search_query, top_n, filter_words, salary_range)
+
+
 search_query = 'Python'
 top_n = 3
 filter_words = 'SQL Английский HTML CSS JSON'.split()
@@ -57,10 +59,10 @@ salary_range = '100000-520000'.split('-')
 user_salary = UserInteraction(search_query, top_n, filter_words, salary_range)
 hh_api = HeadHunterAPI()
 
-hh_vacancies = hh_api.get_vacancies(search_query, 100) #js файл
-vacancies_list = Vacancy.get_filtered_vacancies(hh_vacancies)
+user_hh_vacancies = hh_api.get_vacancies(search_query, 100) #js файл
+user_vacancies_list = Vacancy.get_filtered_vacancies(user_hh_vacancies)
 
-filtered_vacancies = user_salary.filter_vacancies(vacancies_list) #obj list
+filtered_vacancies = user_salary.filter_vacancies(user_vacancies_list) #obj list
 
 ranged_vacancies = user_salary.get_vacancies_by_salary(filtered_vacancies)
 

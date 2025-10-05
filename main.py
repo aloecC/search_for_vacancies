@@ -1,7 +1,9 @@
 from src.api_client import HeadHunterAPI
 from src.file_manager import JSONSaver
 from src.vacancy_service import Vacancy
- #Создание экземпляра класса для работы с API сайтов с вакансиями
+from user import UserInteraction
+
+#Создание экземпляра класса для работы с API сайтов с вакансиями
 hh_api = HeadHunterAPI()
 
 # Получение вакансий с hh.ru в формате JSON
@@ -17,4 +19,3 @@ json_saver = JSONSaver()
 json_saver.adding_data_to_file(vacancy)
 json_saver.adding_data_to_file(vacancies_list)
 json_saver.deleting_data_from_a_file(vacancy)
-
