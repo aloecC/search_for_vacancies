@@ -1,6 +1,3 @@
-import json
-import os
-import sys
 import unittest
 from unittest.mock import mock_open, patch
 from src.file_manager import JSONSaver
@@ -35,7 +32,6 @@ class TestFileManager(unittest.TestCase):
         self.js_file.deleting_data_from_a_file(vacancy2)
         item = vacancy2.to_dict()
         self.assertEqual(self.js_file.check_data_to_file(item), True)
-
 
 
 if __name__ == '__main__':

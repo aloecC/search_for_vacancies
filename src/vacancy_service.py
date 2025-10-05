@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import List
 
 from src.api_client import HeadHunterAPI
 
@@ -112,13 +112,12 @@ class Vacancy(HeadHunterAPI):
         return __lst_vacancy
 
     @classmethod
-    def cast_to_object_list(cls, vacancies_json) -> List[str]:
+    def cast_to_object_list(cls, vacancies_list) -> List[str]:
         """
         Преобразование списка вакансий-объектов в список строк.
         """
         vacancies_info = []
-        vacancies_json = cls.get_filtered_vacancies(vacancies_json)
-        for vacancy in vacancies_json:
+        for vacancy in vacancies_list:
             vacancies_info.append(
                 f"{vacancy.name}, Ссылка: {vacancy.url}, ЗП: {vacancy.salary} руб. "
                 f"Требования: {vacancy.requirement}."

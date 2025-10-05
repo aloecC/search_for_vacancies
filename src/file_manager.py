@@ -107,13 +107,3 @@ class JSONSaver(BaseFileManager):
                 current_data.pop(index_to_remove)
                 with open(self.__js_file, 'w', encoding='utf-8') as file:
                     json.dump(current_data, file, ensure_ascii=False, indent=4)
-
-
-
-
-
-
-
-
-
-
