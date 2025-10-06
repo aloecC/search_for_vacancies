@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch, Mock
-from src.api_client import Parser, HeadHunterAPI
+from src.api.hh_api_client import Parser, HeadHunterAPI
 
 
 class TestParserBase(unittest.TestCase):
@@ -25,7 +25,7 @@ class TestHHApiClient(unittest.TestCase):
 
     def test_connect_sets_status_on_200(self):
         # Подменяем приватный метод __connect через напрямую вызов в тесте (name mangling)
-        with patch("src.api_client.requests.get") as mock_get:
+        with patch("src.api.hh_api_client.requests.get") as mock_get:
             mock_resp = Mock()
             mock_resp.status_code = 200
             mock_get.return_value = mock_resp
@@ -37,7 +37,7 @@ class TestHHApiClient(unittest.TestCase):
             self.assertTrue(getattr(self.api, "_HeadHunterAPI__status"))
 
     def test_connect_prints_error_on_non_200(self):
-        with patch("src.api_client.requests.get") as mock_get, \
+        with patch("src.api.hh_api_client.requests.get") as mock_get, \
                 patch("builtins.print") as mock_print:
             mock_resp = Mock()
             mock_resp.status_code = 404
@@ -54,8 +54,8 @@ class TestHHApiClient(unittest.TestCase):
 
     def test_get_vacancies_calls_connect_and_fetches_items(self):
         # Подменяем приватный метод __connect и requests.get для fetch вакансий
-        with patch("src.api_client.HeadHunterAPI._HeadHunterAPI__connect") as mock_connect, \
-             patch("src.api_client.requests.get") as mock_get:
+        with patch("src.api.hh_api_client.HeadHunterAPI._HeadHunterAPI__connect") as mock_connect, \
+             patch("src.api.hh_api_client.requests.get") as mock_get:
 
             mock_resp = Mock()
             mock_resp.json.return_value = {"items": [{"url": "http://a", "name": "A"}]}
@@ -63,10 +63,8 @@ class TestHHApiClient(unittest.TestCase):
 
             # вызов public метода
             result = self.api.get_vacancies("python")
-
             # Проверяем, что __connect был вызван
             mock_connect.assert_called_once()
-
             # Проверяем, что запрос вышел с параметрами text и per_page
             args, kwargs = mock_get.call_args
             # URL в первый аргумент, параметры в kwargs['params']

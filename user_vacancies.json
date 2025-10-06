@@ -1,81 +1,9 @@
 [
     {
-        "name": "Стажер в Hard Code",
-        "url": "https://api.hh.ru/vacancies/125834072?host=hh.ru",
-        "salary": 0,
-        "requirements": ""
-    },
-    {
-        "name": "Senior Frontend Developer (React.js)",
-        "url": "https://api.hh.ru/vacancies/125975480?host=hh.ru",
-        "salary": "4000",
-        "requirements": ""
-    },
-    {
-        "name": "Python Backend-разработчик",
-        "url": "https://api.hh.ru/vacancies/125689509?host=hh.ru",
-        "salary": "300000",
-        "requirements": ""
-    },
-    {
-        "name": "Стажер / Junior BI engenineer",
-        "url": "https://api.hh.ru/vacancies/125828331?host=hh.ru",
-        "salary": 0,
-        "requirements": ""
-    },
-    {
-        "name": "QA тестировщик",
-        "url": "https://api.hh.ru/vacancies/126027478?host=hh.ru",
-        "salary": "110000",
-        "requirements": ""
-    },
-    {
-        "name": "Бухгалтер",
-        "url": "https://api.hh.ru/vacancies/125731793?host=hh.ru",
-        "salary": "2200",
-        "requirements": ""
-    },
-    {
-        "name": "Инженер по тестированию",
-        "url": "https://api.hh.ru/vacancies/126010780?host=hh.ru",
-        "salary": 0,
-        "requirements": ""
-    },
-    {
-        "name": "Middle Data Аналитик",
-        "url": "https://api.hh.ru/vacancies/125990711?host=hh.ru",
-        "salary": "400000-600000",
-        "requirements": ""
-    },
-    {
-        "name": "Python junior/middle разработчик",
-        "url": "https://api.hh.ru/vacancies/125976319?host=hh.ru",
-        "salary": "90000-130000",
-        "requirements": ""
-    },
-    {
-        "name": "Python-разработчик",
-        "url": "https://api.hh.ru/vacancies/126021540?host=hh.ru",
-        "salary": "140000-180000",
-        "requirements": ""
-    },
-    {
-        "name": "Стажер в Hard Code",
-        "url": "https://api.hh.ru/vacancies/125834072?host=hh.ru",
-        "salary": 0,
-        "requirements": "Кандидат должен иметь базовый опыт разработки или программирования на одном из современных языков программирования, таких как C#, Java, <highlighttext>Python</highlighttext>, JavaScript..."
-    },
-    {
-        "name": "Senior Frontend Developer (React.js)",
-        "url": "https://api.hh.ru/vacancies/125975480?host=hh.ru",
-        "salary": "4000",
-        "requirements": "API Interaction: Familiarity with APIs, particularly in <highlighttext>Python</highlighttext>. Version Control: Solid understanding of Git (including sub-modules) and Bitbucket."
-    },
-    {
-        "name": "Middle+ Python Developer",
-        "url": "https://api.hh.ru/vacancies/126073138?host=hh.ru",
-        "salary": "4000",
-        "requirements": "High level of accountability and commitment. Proficiency in <highlighttext>Python</highlighttext> programming (7+ years). Proficiency in Rust programming (3+ years)."
+        "name": "Python Developer",
+        "url": "<https://hh.ru/vacancy/123456>",
+        "salary": "100000-150000",
+        "requirements": "Опыт работы от 3 лет..."
     },
     {
         "name": "Стажер / Junior BI engenineer",
@@ -84,39 +12,297 @@
         "requirements": "знание инструментов визуализации данных (например, Power BI, Qlik) будет преимуществом. - Владение языками программирования (например, <highlighttext>Python</highlighttext>, R) приветствуется. - Стремление учиться, адаптироваться..."
     },
     {
-        "name": "Бухгалтер",
-        "url": "https://api.hh.ru/vacancies/125731793?host=hh.ru",
-        "salary": "2200",
-        "requirements": "PostgreSQL, MySQL, MongoDB, Apache Superset.  Cloudflare AI, Fireworks.ai, HuggingFace, Hyperbolic, OpenRouter.  <highlighttext>Python</highlighttext>, JavaScript (JS), VBA, VBScript, HTML, CSS, JSON, Git."
-    },
-    {
-        "name": "Python Backend-разработчик",
-        "url": "https://api.hh.ru/vacancies/125689509?host=hh.ru",
-        "salary": "300000",
-        "requirements": "Опыт работы с <highlighttext>Python</highlighttext> (FastAPI или аналогичные фреймворки). Уверенные знания PostgreSQL, умение писать оптимизированные запросы. Опыт работы с очередями (Celery..."
-    },
-    {
-        "name": "Младший Python разработчик",
-        "url": "https://api.hh.ru/vacancies/125245575?host=hh.ru",
+        "name": "Стажер в Hard Code",
+        "url": "https://api.hh.ru/vacancies/125834072?host=hh.ru",
         "salary": 0,
-        "requirements": "Образование высшее/неполное высшее в ведущих ВУЗах. Знание <highlighttext>Python</highlighttext> и SQL. Хорошие аналитические способности, ориентированность на результат."
+        "requirements": "Кандидат должен иметь базовый опыт разработки или программирования на одном из современных языков программирования, таких как C#, Java, <highlighttext>Python</highlighttext>, JavaScript..."
     },
     {
-        "name": "Аналитик данных (Junior)",
-        "url": "https://api.hh.ru/vacancies/126083111?host=hh.ru",
-        "salary": 0,
-        "requirements": "SQL: join, оконные функции. <highlighttext>Python</highlighttext>: базовые конструкции и структуры данных, pandas. Основы A/B-тестирования: этапы и что на каждом..."
+        "name": "Middle Backend разработчик (Python)",
+        "url": "https://api.hh.ru/vacancies/126180222?host=hh.ru",
+        "salary": "600000-900000",
+        "requirements": "Опыт коммерческой разработки на <highlighttext>Python</highlighttext> от 3 лет. - Глубокое знание и опыт работы с фреймворками Django и FastAPI. -"
     },
     {
-        "name": "Junior Python-разработчик",
-        "url": "https://api.hh.ru/vacancies/126031777?host=hh.ru",
+        "name": "Senior Frontend Developer (React.js)",
+        "url": "https://api.hh.ru/vacancies/125975480?host=hh.ru",
+        "salary": "4000",
+        "requirements": "API Interaction: Familiarity with APIs, particularly in <highlighttext>Python</highlighttext>. Version Control: Solid understanding of Git (including sub-modules) and Bitbucket."
+    },
+    {
+        "name": "Python-разработчик",
+        "url": "https://api.hh.ru/vacancies/126182414?host=hh.ru",
+        "salary": "50000-100000",
+        "requirements": "Опыт разработки Telegram-ботов с использованием aiogram (версия 3.x) и асинхронного программирования <highlighttext>Python</highlighttext> (asyncio). Знание технологии Photon на уровне..."
+    },
+    {
+        "name": "Разработчик Python",
+        "url": "https://api.hh.ru/vacancies/124498727?host=hh.ru",
         "salary": 0,
-        "requirements": "Хорошее знание <highlighttext>Python</highlighttext> 3: понимание принципов работы REST API, умение разбирать структуру запросов и ответов, умение читать чужой код."
+        "requirements": "Высшее образование (ИТ, информационная безопасность). Опыт работы с <highlighttext>Python</highlighttext> и Docker. Навыки работы с Groovy, Bash, REST API, Git и..."
+    },
+    {
+        "name": "Middle+ Python Developer",
+        "url": "https://api.hh.ru/vacancies/126073138?host=hh.ru",
+        "salary": "4000",
+        "requirements": "High level of accountability and commitment. Proficiency in <highlighttext>Python</highlighttext> programming (7+ years). Proficiency in Rust programming (3+ years)."
+    },
+    {
+        "name": "QA-инженер (веб-разработка)",
+        "url": "https://api.hh.ru/vacancies/126164992?host=hh.ru",
+        "salary": 0,
+        "requirements": "Внимательность к деталям, системное мышление, ответственность. Опыт написания автотестов на JavaScript или <highlighttext>Python</highlighttext>. Знание инструментов нагрузочного тестирования (JMeter, Locust)."
+    },
+    {
+        "name": "Тестировщик",
+        "url": "https://api.hh.ru/vacancies/126162597?host=hh.ru",
+        "salary": 0,
+        "requirements": "Понимание как работают подсистемы беспилотного транспорта. Базовые навыки работы с ROS/ROS2. Навыки программирования на C++ или <highlighttext>Python</highlighttext>."
+    },
+    {
+        "name": "Стажер Аналитик данных (Группа аналитики данных)",
+        "url": "https://api.hh.ru/vacancies/126173389?host=hh.ru",
+        "salary": "50000",
+        "requirements": "Высшее техническое/ математическое образование (также рассматриваем студентов последнего курса с возможностью полной занятости). Знания: базовый <highlighttext>Python</highlighttext>, базовый SQL."
+    },
+    {
+        "name": "Начальник отдела (бизнес-аналитика)",
+        "url": "https://api.hh.ru/vacancies/126176195?host=hh.ru",
+        "salary": 0,
+        "requirements": "Опыт описания бизнес-процессов в нотациях BPMN, UML или др.. Знание SQL, <highlighttext>Python</highlighttext>. Понимание принципов построения DataLake. Понимание принципов разработки..."
+    },
+    {
+        "name": "Специалист технической поддержки",
+        "url": "https://api.hh.ru/vacancies/125976734?host=hh.ru",
+        "salary": "180000-180000",
+        "requirements": "Опыт работы в технической поддержке enterprise-продуктов или QA. - Знание Kubernetes, Helm. - Умение читать и понимать код на <highlighttext>Python</highlighttext> или..."
+    },
+    {
+        "name": "Flutter-разработчик",
+        "url": "https://api.hh.ru/vacancies/126143952?host=hh.ru",
+        "salary": 0,
+        "requirements": "Опыт коммерческой разработки на Flutter от 2 лет. Отличное понимание Stateful/Stateless виджетов. Владение BLoC/Cubit, знание принципов Clean Architecture."
+    },
+    {
+        "name": "Golang-разработчик",
+        "url": "https://api.hh.ru/vacancies/126162185?host=hh.ru",
+        "salary": 0,
+        "requirements": "Желание или опыт писать код на <highlighttext>Python</highlighttext>. Умение проектировать устойчивые, распределённые системы. Базовое понимание архитектурных паттернов и структур данных."
+    },
+    {
+        "name": "Помощник программиста",
+        "url": "https://api.hh.ru/vacancies/126157377?host=hh.ru",
+        "salary": 0,
+        "requirements": "Базовые навыки программирования на одном из языков: C# или <highlighttext>Python</highlighttext>. Понимание основ синтаксиса, умение читать и анализировать простой код для..."
+    },
+    {
+        "name": "Тестировщик веб-приложений",
+        "url": "https://api.hh.ru/vacancies/120800634?host=hh.ru",
+        "salary": 0,
+        "requirements": "Опыт E2E-тестирования от 2+ лет. Знание <highlighttext>Python</highlighttext> + Pytest, TypeScript + Playwright. Опыт тестирования API (REST..."
+    },
+    {
+        "name": "Python-разработчик",
+        "url": "https://api.hh.ru/vacancies/126157322?host=hh.ru",
+        "salary": "50000-120000",
+        "requirements": "Опыт в <highlighttext>Python</highlighttext> от 1 до 3 лет — также рассматриваем начинающих с хорошей базой и готовностью к тестовому заданию."
+    },
+    {
+        "name": "Python-разработчик",
+        "url": "https://api.hh.ru/vacancies/126102453?host=hh.ru",
+        "salary": 0,
+        "requirements": "Глубокое знание <highlighttext>Python</highlighttext> 3.x и асинхронного программирования. Опыт построения ETL/ELT пайплайнов и работы с данными (Pandas, NumPy)."
+    },
+    {
+        "name": "Системный администратор Linux (готовый к релокации)",
+        "url": "https://api.hh.ru/vacancies/126144842?host=hh.ru",
+        "salary": "3500-4000",
+        "requirements": "Базовые знания основ СУБД (Oracle, PostgreSQL). Базовые знания языков скриптов (Bash, <highlighttext>Python</highlighttext>). Понимание принципов информационной безопасности. Знание английского языка для..."
+    },
+    {
+        "name": "Frontend-разработчик (React)",
+        "url": "https://api.hh.ru/vacancies/126169812?host=hh.ru",
+        "salary": 0,
+        "requirements": "Знание реляционных СУБД. Знание других языков (dart/flutter, golang, <highlighttext>python</highlighttext>). Опыт работы с docker, docker-compose, CI/CD, package registry."
+    },
+    {
+        "name": "Аналитик данных (Ultimate Education)",
+        "url": "https://api.hh.ru/vacancies/126154236?host=hh.ru",
+        "salary": 0,
+        "requirements": "Опыт работы с Airflow. Знание BI-систем (желательно Superset). <highlighttext>Python</highlighttext> (Pandas, Requests, SQLAlchemy — базовый уровень). Понимание продуктовых и маркетинговых метрик..."
+    },
+    {
+        "name": "QA тестировщик",
+        "url": "https://api.hh.ru/vacancies/126154904?host=hh.ru",
+        "salary": "500000",
+        "requirements": "ГОТОВНОСТЬ К АТМОСФЕРЕ СТАРТАПА и высокой скорости изменений. Высокий уровень ТАЙМ МЕНЕДЖЕМЕНТА поставленных задач и проектов. Знание основных принципов Agile."
+    },
+    {
+        "name": "Data Analyst",
+        "url": "https://api.hh.ru/vacancies/126167889?host=hh.ru",
+        "salary": "19000000-33000000",
+        "requirements": "SQL: Postgres, SqlLite tajribasi. — Power BI: dashboards, vizual tahlil. — <highlighttext>Python</highlighttext>: Pandas, Matplotlib, Seaborn, SciPy. — Statistika: A/B testlar, gipotezalarni sinash. —"
+    },
+    {
+        "name": "Python Developer / Backend (Junior)",
+        "url": "https://api.hh.ru/vacancies/126122414?host=hh.ru",
+        "salary": "50000-60000",
+        "requirements": "Опыт работы в Backend разработке на <highlighttext>Python</highlighttext> от 1 года. Знание FastAPI, PostgreSQL, Redis, Flask."
+    },
+    {
+        "name": "Business analyst Big Data",
+        "url": "https://api.hh.ru/vacancies/126157684?host=hh.ru",
+        "salary": 0,
+        "requirements": "Уверенное владение языками программирования: SQL, <highlighttext>Python</highlighttext> (Pandas, Numpy, Sklearn, XGBoost), знание PL/SQL. Опыт работы с Big Data-инструментами: Spark..."
+    },
+    {
+        "name": "Инженер по тестированию ПО",
+        "url": "https://api.hh.ru/vacancies/126111343?host=hh.ru",
+        "salary": "160000-200000",
+        "requirements": "Опыт ручного тестирования. Опыт автоматизации тестирования на <highlighttext>Python</highlighttext>. Понимание принципов работы веб-приложений, микросервисной архитектуры и асинхронного взаимодействия."
+    },
+    {
+        "name": "Специалист по искусственному интеллекту",
+        "url": "https://api.hh.ru/vacancies/126017012?host=hh.ru",
+        "salary": 0,
+        "requirements": "Внимательность к деталям, ответственность и системный подход к выполнению задач. Будет плюсом: Хорошее знание языка <highlighttext>Python</highlighttext>. Знание английского языка."
+    },
+    {
+        "name": "Python-разработчик (junior)",
+        "url": "https://api.hh.ru/vacancies/125977327?host=hh.ru",
+        "salary": 0,
+        "requirements": "Имеете опыт написания веб-сервисов на <highlighttext>Python</highlighttext> (FastAPI или Django). Понимаете принципы проектирования БД. Имеете опыт работы в Git."
+    },
+    {
+        "name": "Data Engineer (junior)",
+        "url": "https://api.hh.ru/vacancies/126172468?host=hh.ru",
+        "salary": 0,
+        "requirements": "Базовые знания SQL, опыт работы с PostgreSQL (знание Oracle будет плюсом). Владение <highlighttext>Python</highlighttext>. Опыт работы с библиотеками для обработки данных..."
     },
     {
         "name": "Junior Python разработчик",
         "url": "https://api.hh.ru/vacancies/125979327?host=hh.ru",
         "salary": 0,
         "requirements": "Английский язык на уровне чтения технической документации. ️ Владение основами синтаксиса <highlighttext>Python</highlighttext>. ️ Понимание основных структур данных: списки, кортежи, множества, словари. ️"
+    },
+    {
+        "name": "Старший инженер-тестировщик",
+        "url": "https://api.hh.ru/vacancies/126165389?host=hh.ru",
+        "salary": 0,
+        "requirements": "Основы языков программирования/скриптинга (<highlighttext>Python</highlighttext> на уровне использования ООП, Bash) для автоматизации задач. Желателен опыт работы с сетевым оборудованием Cisco..."
+    },
+    {
+        "name": "Преподаватель программирования",
+        "url": "https://api.hh.ru/vacancies/125925920?host=hh.ru",
+        "salary": "500-1800",
+        "requirements": "Опыт преподавания или работы с детьми приветствуется. Базовые знания в области программирования (Scratch, <highlighttext>Python</highlighttext> и др.). Умение объяснять сложные вещи..."
+    },
+    {
+        "name": "Python-разработчик",
+        "url": "https://api.hh.ru/vacancies/126027041?host=hh.ru",
+        "salary": 0,
+        "requirements": "Опыт работы <highlighttext>Python</highlighttext> разработчиком от 3-х лет. Опыт работы с библиотеками (Pandas, NumPy для данных) и фреймворками (FastAPI)."
+    },
+    {
+        "name": "QA тестировщик",
+        "url": "https://api.hh.ru/vacancies/126058796?host=hh.ru",
+        "salary": 0,
+        "requirements": "Знание методов и методик ручного и автоматизированного тестирования. Опыт разработки автотестов на <highlighttext>Python</highlighttext>. Опыт тестирования REST API. Работа с инструментами..."
+    },
+    {
+        "name": "Junior Data Analyst",
+        "url": "https://api.hh.ru/vacancies/125978804?host=hh.ru",
+        "salary": 0,
+        "requirements": "Законченные курсы аналитики данных, либо специальность в университете (обязательно наличие портфолио с примерами работ), или опыт работы аналитиком данных до..."
+    },
+    {
+        "name": "Младший аналитик данных",
+        "url": "https://api.hh.ru/vacancies/125815657?host=hh.ru",
+        "salary": 0,
+        "requirements": "Базовые знания <highlighttext>Python</highlighttext>3 (Pandas, NumPy) для анализа данных. Понимание основ веб-аналитики (Google Analytics, Яндекс.Метрика). Понимание, что такое utm..."
+    },
+    {
+        "name": "Python Backend разработчик",
+        "url": "https://api.hh.ru/vacancies/126169430?host=hh.ru",
+        "salary": "150000",
+        "requirements": "Опыт работы с <highlighttext>Python</highlighttext> и фреймворками Django и Django Rest. Понимание принципов разработки RESTful API. Опыт работы с Yandex Cloud..."
+    },
+    {
+        "name": "Бизнес-аналитик",
+        "url": "https://api.hh.ru/vacancies/126017120?host=hh.ru",
+        "salary": "160000-180000",
+        "requirements": "Высшее образование (желательно техническое или математическое). Плюсом будет знание языков программирования (например, SQL, <highlighttext>Python</highlighttext>). Понимание принципов работы реляционных баз данных."
+    },
+    {
+        "name": "Аналитик данных (ассортимент)",
+        "url": "https://api.hh.ru/vacancies/125150402?host=hh.ru",
+        "salary": 0,
+        "requirements": "Умение использовать JOIN, оконные функции, группировки, CTE и временные таблицы. <highlighttext>Python</highlighttext>: Уверенное владение основными структурами данных и библиотеками для анализа..."
+    },
+    {
+        "name": "Golang-разработчик",
+        "url": "https://api.hh.ru/vacancies/125974496?host=hh.ru",
+        "salary": "240000-270000",
+        "requirements": "...объяснять свои решения и договариваться с коллегами. Будет плюсом: Опыт ведения проекта с нуля до внедрения. Опыт работы с <highlighttext>Python</highlighttext>."
+    },
+    {
+        "name": "Frontend-разработчик",
+        "url": "https://api.hh.ru/vacancies/126128317?host=hh.ru",
+        "salary": "120000",
+        "requirements": "Отличное знание HTML, CSS, JavaScript, TypeScript. Опыт разработки на Node.js / Next.js. Опыт работы с UI-библиотеками (MUI, AntDesign или аналогичные)."
+    },
+    {
+        "name": "Python-разработчик",
+        "url": "https://api.hh.ru/vacancies/126179021?host=hh.ru",
+        "salary": "200000",
+        "requirements": "Коммерческий опыт разработки на <highlighttext>Python</highlighttext> (от 1 года) с использованием FastAPI или аналогичных современных фреймворков. Умение быстро и эффективно прототипировать..."
+    },
+    {
+        "name": "Manual QA Engineer ПО",
+        "url": "https://api.hh.ru/vacancies/123815212?host=hh.ru",
+        "salary": 0,
+        "requirements": "Опыт работы с <highlighttext>Python</highlighttext>. Опыт работы с SQLite. Опыт написания несложных скриптов (cmd/powershell/bash/<highlighttext>python</highlighttext>/vbs). Опыт работы с..."
+    },
+    {
+        "name": "QA manual middle специалист",
+        "url": "https://api.hh.ru/vacancies/125518889?host=hh.ru",
+        "salary": "60000",
+        "requirements": "Опыт тестирования мобильных приложений. - Опыт работы с Allure TestOps. - Опыт работы с продуктами КЭДО. - Опыт написания автотестов на <highlighttext>Python</highlighttext>."
+    },
+    {
+        "name": "QA-инженер (веб-разработка)",
+        "url": "https://api.hh.ru/vacancies/126112776?host=hh.ru",
+        "salary": "220000-240000",
+        "requirements": "Будет преимуществом: Опыт написания автотестов (JavaScript/<highlighttext>Python</highlighttext>). Знание инструментов нагрузочного тестирования (JMeter, Locust). Опыт работы в Agile-командах (Scrum)."
+    },
+    {
+        "name": "Аналитик данных",
+        "url": "https://api.hh.ru/vacancies/125428320?host=hh.ru",
+        "salary": 0,
+        "requirements": "Опыт работы с BI-инструментами (Power BI, Tableau, Looker). Навыки работы с <highlighttext>Python</highlighttext>. Опыт работы с сырыми данными."
+    },
+    {
+        "name": "Python-разработчик",
+        "url": "https://api.hh.ru/vacancies/126150132?host=hh.ru",
+        "salary": "120000-200000",
+        "requirements": "Базовые знания <highlighttext>Python</highlighttext> и принципов ООП. Понимание клиент-серверной архитектуры и работы HTTP. Навыки работы с базами данных (SQL на..."
+    },
+    {
+        "name": "QA-engineer",
+        "url": "https://api.hh.ru/vacancies/123562510?host=hh.ru",
+        "salary": 0,
+        "requirements": "Знания и умения работы с Jira/Confluence/<highlighttext>Python</highlighttext>/PyTest/ Pywinauto/Selenium/Jenkins/Git/Allure/Insomnia/Postman/Json. Навыки работы с..."
+    },
+    {
+        "name": "Middle QA Automation",
+        "url": "https://api.hh.ru/vacancies/126171316?host=hh.ru",
+        "salary": 0,
+        "requirements": "Понимание работы клиент-серверных приложений. Опыт работы с <highlighttext>python</highlighttext> (pytest, requests, SQLAlchemy, pandas). Знание SQL (join и агрегатные функции, вложенные..."
+    },
+    {
+        "name": "Тестировщик ПО",
+        "url": "https://api.hh.ru/vacancies/126102551?host=hh.ru",
+        "salary": "70000-250000",
+        "requirements": "Опыт работы с программами для прошивки микроконтроллеров. Приветствуется знание основ <highlighttext>Python</highlighttext> или Bash для автоматизации задач. Умение читать техническую и..."
     }
 ]

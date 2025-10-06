@@ -2,8 +2,9 @@ import os
 import sys
 from abc import ABC, abstractmethod
 import json
+from typing import List, Dict
 
-from src.vacancy_service import Vacancy
+from src.models.vacancy_service import Vacancy
 
 
 class BaseFileManager(ABC):
@@ -35,8 +36,7 @@ class JSONSaver(BaseFileManager):
     def receiving_data_from_a_file(self):
         """Метод получения данных из файла"""
         if not os.path.exists(self.__js_file):
-            # Если файла нет, вернет пустой список
-            return []
+            return [] # Если файла нет, вернет пустой список
         with open(self.__js_file, 'r', encoding="utf-8") as file:
             try:
                 data = json.load(file)
@@ -45,22 +45,21 @@ class JSONSaver(BaseFileManager):
             return data
 
     def check_data_to_file(self, item):
-        """Метод проверки наличия словаря в файле"""
+        """Метод проверки наличия словаря (дублей) в файле"""
         current_data = self.receiving_data_from_a_file()
         if item in current_data:
-            return False
-        else:
             return True
+        else:
+            return False
 
     def adding_data_to_file(self, new_data):
         """Метод добавления данных в файл"""
         # Получаем текущие данные (если файла нет или он пустой — пустой список)
         current_data = self.receiving_data_from_a_file()
-
         # Приводим новый объект Vacancy к словарю
         if isinstance(new_data, Vacancy):
             item = new_data.to_dict()
-            if self.check_data_to_file(item) is False:
+            if self.check_data_to_file(item) is True:
                 return
             current_data.append(item)
             # Сохраняем обратно в файл
@@ -68,7 +67,7 @@ class JSONSaver(BaseFileManager):
                 json.dump(current_data, file, ensure_ascii=False, indent=4)
         elif isinstance(new_data, dict):
             item = new_data
-            if self.check_data_to_file(item) is False:
+            if self.check_data_to_file(item) is True:
                 return
             current_data.append(item)
             # Сохраняем обратно в файл
@@ -77,7 +76,7 @@ class JSONSaver(BaseFileManager):
         elif isinstance(new_data, list):
             for f in new_data:
                 item = f.to_dict()
-                if self.check_data_to_file(item) is False:
+                if self.check_data_to_file(item) is True:
                     return
                 current_data.append(item)
                 # Сохраняем обратно в файл

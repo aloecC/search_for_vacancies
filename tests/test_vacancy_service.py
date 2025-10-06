@@ -1,6 +1,6 @@
 import unittest
 
-from src.vacancy_service import Vacancy
+from src.models.vacancy_service import Vacancy
 
 
 class TestVacancyValidation(unittest.TestCase):

@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import mock_open, patch
-from src.file_manager import JSONSaver
-from src.vacancy_service import Vacancy
+from src.handler_file.json_handler import JSONSaver
+from src.models.vacancy_service import Vacancy
 
 
 class TestFileManager(unittest.TestCase):
@@ -24,14 +24,14 @@ class TestFileManager(unittest.TestCase):
         vacancy2 = Vacancy("Developer", "<https://hh.ru/vacancy/123456>", "200000-250000", "Требования: опыт работы от 3 лет...")
         self.js_file.adding_data_to_file(vacancy2)
         item = vacancy2.to_dict()
-        self.assertEqual(self.js_file.check_data_to_file(item), False)
+        self.assertEqual(self.js_file.check_data_to_file(item), True)
 
     def test_deleting_data_from_a_file(self):
         vacancy2 = Vacancy("Developer", "<https://hh.ru/vacancy/123456>", "200000-250000",
                            "Требования: опыт работы от 3 лет...")
         self.js_file.deleting_data_from_a_file(vacancy2)
         item = vacancy2.to_dict()
-        self.assertEqual(self.js_file.check_data_to_file(item), True)
+        self.assertEqual(self.js_file.check_data_to_file(item), False)
 
 
 if __name__ == '__main__':

@@ -1,6 +1,5 @@
 from typing import List
-
-from src.api_client import HeadHunterAPI
+from src.api.hh_api_client import HeadHunterAPI
 
 
 class Vacancy(HeadHunterAPI):
@@ -15,7 +14,6 @@ class Vacancy(HeadHunterAPI):
         self._requirement = self._validate_requirement(requirement)
         self.__lst_vacancy = []  # список объектов вакансий
 
-    # Приватные валидаторы
     def _validate_name(self, value):
         if not isinstance(value, str) or not value.strip():
             raise ValueError("Название вакансии должно быть непустой строкой.")

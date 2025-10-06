@@ -1,5 +1,6 @@
-from src.api_client import HeadHunterAPI
-from src.vacancy_service import Vacancy
+from src.api.hh_api_client import HeadHunterAPI
+from src.handler_file.json_handler import JSONSaver
+from src.models.vacancy_service import Vacancy
 
 
 class UserInteraction:
@@ -7,8 +8,8 @@ class UserInteraction:
     def __init__(self, search_query, top_n, filter_words, salary_range):
         self.search_query = search_query # поисковой запрос в общем
         self.top_n = top_n
-        self.filter_words = filter_words # ключ-слова в requirement
-        self.salary_range = salary_range
+        self.filter_words = filter_words.split() # ключ-слова в requirement
+        self.salary_range = salary_range.split('-')
 
     @classmethod
     def filter_vacancies(cls, vacancies_list):
@@ -18,7 +19,8 @@ class UserInteraction:
         for obj in vacancies_list:
             for word in filter_words:
                 if word.lower() in obj.requirement.lower():
-                    filtered_vacancies.append(obj)
+                    if obj not in filtered_vacancies:
+                        filtered_vacancies.append(obj)
         return filtered_vacancies
 
     def get_vacancies_by_salary(self, filtered_vacancies):
@@ -46,17 +48,17 @@ class UserInteraction:
 def user_get_top(search_query=None, top_n=None, filter_words=None, salary_range=None):
     '''Функция для взаимодействия с пользователем'''
     platforms = ["HeadHunter"]
+    print('Здравствуйте! Давайте подберем вам работу!')
 
-    if search_query is None and top_n is None and filter_words is None and salary_range is None:
-        search_query = input("Введите поисковый запрос: ")
-        top_n = int(input("Введите количество вакансий для вывода в топ N: "))
-        filter_words = input("Введите ключевые слова для фильтрации вакансий: ").split()
-        salary_range = input("Введите диапазон зарплат: ")
+    search_query = input("Введите поисковый запрос: ")
+    top_n = int(input("Введите количество вакансий для вывода: "))
+    filter_words = input("Введите ключевые слова для фильтрации вакансий: ")
+    salary_range = input("Введите диапазон зарплат: ")
 
     user_salary = UserInteraction(search_query, top_n, filter_words, salary_range)
     user_hh_api = HeadHunterAPI()
 
-    user_hh_vacancies = user_hh_api.get_vacancies(search_query, 100)  # js файл
+    user_hh_vacancies = user_hh_api.get_vacancies(search_query)  # js файл
     user_vacancies_list = Vacancy.get_filtered_vacancies(user_hh_vacancies)
 
     filtered_vacancies = user_salary.filter_vacancies(user_vacancies_list)  # obj list
@@ -66,14 +68,28 @@ def user_get_top(search_query=None, top_n=None, filter_words=None, salary_range=
     user_salary.sort_vacancies(ranged_vacancies)
 
     top_vacancies = user_salary.get_top_vacancies(ranged_vacancies)
+
     top_vacancies_str = Vacancy.cast_to_object_list(top_vacancies)
-    print(f"Ваш топ-{top_n}:")
-    [print(vacancy) for vacancy in top_vacancies_str]
+
+    if len(top_vacancies_str) == 0:
+        print('По вашему запросу ничего не найдено, измените критерии поиска и повторите запрос')
+        check = input('Нажмите Enter, чтобы продолжить или введите 1 для выхода из поиска: ')
+        if check == '':
+            user_get_top()
+        else:
+            return
+    else:
+        if len(top_vacancies_str) < top_n:
+            print("По вашему запросу нашлось меньше вакансий")
+            top_n = len(top_vacancies_str)
+        print(f"Ваш топ-{top_n}:")
+        [print(vacancy) for vacancy in top_vacancies_str]
+    return 'Удачного трудоустройства!'
 
 
 search_query = 'Python'
 top_n = 3
-filter_words = 'Exel SQL Английский Высшее'.split()
-salary_range = '100000-520000'.split('-')
+filter_words = 'Exel SQL Английский Высшее'
+salary_range = '100000-520000'
 
-user_get_top(search_query, top_n, filter_words, salary_range)
+#user_get_top(search_query, top_n, filter_words, salary_range)

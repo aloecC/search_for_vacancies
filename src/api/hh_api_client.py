@@ -28,7 +28,6 @@ class HeadHunterAPI(Parser):
     """
 
     def __init__(self, file_worker=None):
-        # приватные атрибуты экземпляра
         self.__url = 'https://api.hh.ru/vacancies'
         self.__headers = {'User-Agent': 'HH-User-Agent'}
         self.__params = {'text': '', 'page': 0, 'per_page': 100}
