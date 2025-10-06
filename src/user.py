@@ -1,14 +1,13 @@
 from src.api.hh_api_client import HeadHunterAPI
-from src.handler_file.json_handler import JSONSaver
 from src.models.vacancy_service import Vacancy
 
 
 class UserInteraction:
     """Класс для взаимодействия с пользователем"""
     def __init__(self, search_query, top_n, filter_words, salary_range):
-        self.search_query = search_query # поисковой запрос в общем
+        self.search_query = search_query  # поисковой запрос в общем
         self.top_n = top_n
-        self.filter_words = filter_words.split() # ключ-слова в requirement
+        self.filter_words = filter_words.split()  # ключ-слова в requirement
         self.salary_range = salary_range.split('-')
 
     @classmethod
@@ -32,7 +31,7 @@ class UserInteraction:
                 (from_obj, to_obj) = obj.salary.split('-')
                 if int(from_obj) >= int(from_salary) and int(to_obj) <= int(to_salary):
                     ranged_vacancies.append(obj)
-            elif int(obj.salary) in range(int(from_salary), int(to_salary)+1):
+            elif int(obj.salary) in range(int(from_salary), int(to_salary) + 1):
                 ranged_vacancies.append(obj)
         return ranged_vacancies
 
@@ -48,7 +47,7 @@ class UserInteraction:
 def user_get_top(search_query=None, top_n=None, filter_words=None, salary_range=None):
     '''Функция для взаимодействия с пользователем'''
     platforms = ["HeadHunter"]
-    print('Здравствуйте! Давайте подберем вам работу!')
+    print(f'Здравствуйте! Мы на платформе {platforms}, Давайте подберем вам работу!')
 
     search_query = input("Введите поисковый запрос: ")
     top_n = int(input("Введите количество вакансий для вывода: "))
@@ -91,5 +90,4 @@ search_query = 'Python'
 top_n = 3
 filter_words = 'Exel SQL Английский Высшее'
 salary_range = '100000-520000'
-
-#user_get_top(search_query, top_n, filter_words, salary_range)
+user_get_top(search_query, top_n, filter_words, salary_range)

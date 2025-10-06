@@ -2,7 +2,7 @@ import os
 import sys
 from abc import ABC, abstractmethod
 import json
-from typing import List, Dict
+
 
 from src.models.vacancy_service import Vacancy
 
@@ -36,7 +36,7 @@ class JSONSaver(BaseFileManager):
     def receiving_data_from_a_file(self):
         """Метод получения данных из файла"""
         if not os.path.exists(self.__js_file):
-            return [] # Если файла нет, вернет пустой список
+            return []
         with open(self.__js_file, 'r', encoding="utf-8") as file:
             try:
                 data = json.load(file)
